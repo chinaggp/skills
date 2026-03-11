@@ -1,0 +1,3 @@
+[submodule "skills/cocos-creator-3.8"]
+	path = skills/cocos-creator-3.8
+	url = https://github.com/chinaggp/cocos-creator-3.8-x.git
