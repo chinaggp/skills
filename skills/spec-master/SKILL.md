@@ -2,7 +2,6 @@
 name: Spec-Master
 description: 基于 Spec Kit 方法论的规范驱动开发技能。将开发过程结构化为「宪法 → 规范 → 方案 → 任务 → 实现」五个阶段，确保 AI 生成的代码符合项目标准。当用户提出新需求、功能开发、或使用 /spec-master 命令时，自动激活此技能。
 ---
-
 # Spec-Master (规范大师) 技能
 
 基于 GitHub Spec Kit 方法论，将"氛围编程"升级为"规范编程"。
@@ -23,6 +22,7 @@ Spec-Master 在每个项目中使用以下目录结构：
 ```
 
 **模板文件**位于本技能的 `templates/` 目录下：
+
 - `templates/spec.md` — 需求规范模板
 - `templates/plan.md` — 技术方案模板
 - `templates/tasks.md` — 任务清单模板
@@ -122,16 +122,16 @@ Spec-Master 在每个项目中使用以下目录结构：
 
 ### 模板 (Templates)
 
-| 文件 | 作用 |
-|------|------|
-| 项目宪法 | `.agent/spec/constitution.md` | 不可违背的基本准则（项目级） |
-| 需求规范模板 | `templates/spec.md` | 描述"做什么"和"为什么" |
-| 技术方案模板 | `templates/plan.md` | 描述"怎么做" |
-| 任务清单模板 | `templates/tasks.md` | AI 可执行的小任务 |
+
+| 文件         | 作用                          |
+| ------------ | ----------------------------- |
+| 项目宪法     | `.agent/spec/constitution.md` |
+| 需求规范模板 | `templates/spec.md`           |
+| 技术方案模板 | `templates/plan.md`           |
+| 任务清单模板 | `templates/tasks.md`          |
 
 ## 💡 使用提示
 
 - 如果需求很小（比如只是加个字段），可以简化流程，跳过 spec 直接写 plan
 - 如果需求很复杂，spec 阶段可以拆成多轮对话迭代
 - 宪法首次创建后建议提交到 Git，作为项目的"开发宪法"长期维护
-- 可以和 `requirement-to-java` 技能配合使用：先用 Spec-Master 走完 spec → plan → tasks，再用 requirement-to-java 加速代码生成
